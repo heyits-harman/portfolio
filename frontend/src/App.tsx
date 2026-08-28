@@ -1,21 +1,15 @@
 import './App.css';
-import { Header } from '../src/sections/header';
-import { MainContent } from '../src/sections/mainContent';
-import { Footer } from '../src/sections/footer';
+import { Header } from '../src/sections/Header';
+import { MainContent } from '../src/sections/MainContent';
+import { Footer } from '../src/sections/Footer';
 
 function App() {
 
   return (
-    <div id="root-container">
-      <div style={{flex: 4}}>
-        <Header />
-      </div>
-      <div style={{flex:81}}>
-        <MainContent />
-      </div>      
-      <div style={{flex:15}}>
-        <Footer />
-      </div>
+    <div id="root-container">     
+      <Header />
+      <MainContent />     
+      <Footer />
     </div>
 
 
@@ -31,7 +25,7 @@ function App() {
     //   <div style={{flex:15, backgroundColor: 'lightpink'}}>
     //     <Footer />
     //   </div>
-    // </div>
+    //</div>
   )
 } 
 

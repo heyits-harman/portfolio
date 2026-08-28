@@ -1,9 +1,14 @@
+import React from 'react';
+
 export function MainContent() {
   return (
-    <>
-      <div style={{textAlign: 'center'}}>
-        Main Area
-      </div>
-    </>
+    <div style={mainStyle}>
+      Main Area
+    </div>
   )
+}
+
+const mainStyle: React.CSSProperties = {
+  textAlign: 'center',
+  flex: 82,
 }
