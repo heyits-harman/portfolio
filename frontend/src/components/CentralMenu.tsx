@@ -1,4 +1,5 @@
 import React from 'react';
+import expIcon from '../assets/VCIQF7ylF9U0o5QZkTgji0mxx28.avif'
 
 export function CentralMenu(){
   return(
@@ -51,7 +52,10 @@ const taskBarStyle: React.CSSProperties = {
 const iconStyle: React.CSSProperties = {
   height: '60px',
   width: '60px',
-  backgroundColor: 'black',
+  backgroundImage: `url(${expIcon})`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
   flex: '0 0 auto',
   borderRadius: '15px',
 }
