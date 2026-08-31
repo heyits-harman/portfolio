@@ -32,7 +32,7 @@ export function MainContent() {
       coords.current.startY = e.clientY;
     }
 
-    const onMouseUp = (e: MouseEvent) => {
+    const onMouseUp = () => {
       isClicked.current = false;
       coords.current.lastX = icon.offsetLeft;
       coords.current.lastY = icon.offsetTop;
