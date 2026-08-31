@@ -1,22 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import linkedinIcon from '../assets/linkedin.png';
 import twitterIcon from '../assets/twitter.png'
 import githubIcon from '../assets/github-logo.png'
 
 export function Header() {
+  const [dateTime, setDateTime] = useState(new Date());
+  useEffect(() => {
+
+    const timer = setInterval(() => {
+      setDateTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  })
+
+  const formattedDate = new Intl.DateTimeFormat("en-GB", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(dateTime);
+
+  // Format time without seconds
+  const formattedTime = new Intl.DateTimeFormat("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  }).format(dateTime).replace("am", "AM").replace("pm", "PM");
+
   return (
     <div style={headerStyle}>
       <div>Harman Singh Gill</div>
       <div style={infoDivStyle}>
         <div style={socialLinks}>
-          <span><img src={linkedinIcon} alt="linkedin" style={{ width: 15, height: 15 }} /></span>
-          <span><img src={twitterIcon} alt="twitter" style={{ width: 15, height: 15 }} /></span>
-          <span><img src={githubIcon} alt="github" style={{ width: 15, height: 15 }} /></span>
+          <a href="https://www.linkedin.com/in/heyits-harman" target="_blank" rel="noopener noreferrer">
+            <img src={linkedinIcon} alt="linkedin" style={{ width: 15, height: 15 }} />
+          </a>
+          <a href="https://x.com/heyitsharman_" target="_blank" rel="noopener noreferrer">
+            <img src={twitterIcon} alt="twitter" style={{ width: 15, height: 15 }} />
+          </a>
+          <a href="https://github.com/heyits-harman"target="_blank" rel="noopener noreferrer">
+            <img src={githubIcon} alt="github" style={{ width: 15, height: 15 }} />
+          </a>
         </div>
         <span style={{marginLeft: '4px', marginRight: '4px'}}><hr style={separater}></hr></span>
         <div style={dateTimeStyle}>
-          <span>Sat, 29 Aug 2026</span>
-          <span>5:44 PM</span>
+          <span>{formattedDate}</span>
+          <span>{formattedTime}</span>
         </div>
       </div>
     </div>
@@ -67,7 +97,7 @@ const socialLinks: React.CSSProperties = {
 const dateTimeStyle: React.CSSProperties = {
   display: 'flex',
   gap: '10px',
-  fontSize: '14px'
+  fontSize: '15px'
 }
 
 const separater: React.CSSProperties = {

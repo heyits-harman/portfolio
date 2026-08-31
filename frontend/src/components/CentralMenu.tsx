@@ -24,7 +24,7 @@ const containerStyle: React.CSSProperties = {
   alignItems: 'center',
   boxSizing: 'border-box',
   paddingBottom: '10px',
-  height: '100px'
+  height: '100px',
 }
 
 const taskBarStyle: React.CSSProperties = {

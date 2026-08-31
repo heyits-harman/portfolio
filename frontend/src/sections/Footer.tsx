@@ -14,10 +14,9 @@ export function Footer() {
 }
 
 const FooterStyle: React.CSSProperties = {
-  flex: 15,
   padding: '10px',
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 1fr)',
   alignItems: 'flex-end',
-  height: '120px'
+  height: '100px'
 }
