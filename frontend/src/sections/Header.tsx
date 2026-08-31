@@ -30,7 +30,7 @@ export function Header() {
 
   return (
     <div style={headerStyle}>
-      <div>Harman Singh Gill</div>
+      <div style={{ cursor: 'pointer' }}>Harman Singh Gill</div>
       <div style={infoDivStyle}>
         <div style={socialLinks}>
           <a href="https://www.linkedin.com/in/heyits-harman" target="_blank" rel="noopener noreferrer">

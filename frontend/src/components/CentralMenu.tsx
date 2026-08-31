@@ -1,16 +1,21 @@
 import React from 'react';
-import expIcon from '../assets/VCIQF7ylF9U0o5QZkTgji0mxx28.avif'
+import { About } from '../icons/About';
+import { Projects } from '../icons/Projects';
+import { Gallery } from '../icons/Gallery';
+import { Video } from '../icons/Video';
+import { Contact } from '../icons/Contact';
+
 
 export function CentralMenu(){
   return(
     <>
       <div style={containerStyle}>
         <div style={taskBarStyle}>
-          <div style={iconStyle}></div>
-          <div style={iconStyle}></div>
-          <div style={iconStyle}></div>
-          <div style={iconStyle}></div>
-          <div style={iconStyle}></div>
+          <About />
+          <Projects />
+          <Gallery />
+          <Video />
+          <Contact />
         </div>
       </div>
     </>
@@ -47,15 +52,4 @@ const taskBarStyle: React.CSSProperties = {
   
   /* Optional subtle shadow to lift it off the desktop */
   boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
-}
-
-const iconStyle: React.CSSProperties = {
-  height: '60px',
-  width: '60px',
-  backgroundImage: `url(${expIcon})`,
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  flex: '0 0 auto',
-  borderRadius: '15px',
 }

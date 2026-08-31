@@ -1,0 +1,43 @@
+.icon {
+  height: 60px;
+  width: 60px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 0 0 auto;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.menu-icon:hover .icon {
+  transform: scale(0.9);
+}
+
+.menu-icon {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.menu-icon .tooltip {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px) scale(0.9);
+  background: #ffffff;
+  color: #000000;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.menu-icon:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-3px) scale(1);
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import expIcon from '../assets/VCIQF7ylF9U0o5QZkTgji0mxx28.avif'
+import expIcon from '../assets/aboutI-icon-img.avif'
 
 export function MainContent() {
 
