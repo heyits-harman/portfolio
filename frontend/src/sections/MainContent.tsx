@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import expIcon from '../assets/aboutI-icon-img.avif'
+import { Resume } from '../icons/Resume'
 
 export function MainContent() {
 
@@ -66,7 +66,7 @@ export function MainContent() {
 
   return (
     <div ref={containerRef} style={mainStyle}>
-      <div ref={iconRef} style={iconStyle}></div>
+      <Resume ref={iconRef}/>
     </div>
   )
 }
@@ -75,19 +75,4 @@ const mainStyle: React.CSSProperties = {
   height: '572px',
   position: 'relative',
   overflow: 'hidden'
-}
-
-const iconStyle: React.CSSProperties = {
-  position: 'absolute',
-  top: '20px',
-  left: '20px',
-  height: '60px',
-  width: '60px',
-  backgroundImage: `url(${expIcon})`,
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  flex: '0 0 auto',
-  borderRadius: '15px',
-  cursor: 'pointer'
 }
