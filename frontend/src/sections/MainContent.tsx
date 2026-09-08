@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { Resume } from '../icons/Resume'
+import { Resume } from '../icons/Resume';
+import { Music } from '../icons/Music'
 
 export function MainContent() {
 
@@ -67,6 +68,7 @@ export function MainContent() {
   return (
     <div ref={containerRef} style={mainStyle}>
       <Resume ref={iconRef}/>
+      <Music ref={iconRef}/>
     </div>
   )
 }
