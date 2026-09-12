@@ -1,5 +1,5 @@
 import '../styles/iconStyles.css'
-import aboutIcon from '../assets/aboutI-icon-img.avif'
+import aboutIcon from '../assets/about-icon-img.avif'
 
 export function About(){
   return (
