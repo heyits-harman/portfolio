@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Resume } from '../icons/Resume';
 import { Music } from '../icons/Music';
 import { AboutMe } from '../icons/AboutMe';
+import { Resources } from '../icons/Resources'
 
 export function MainContent() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -66,6 +67,7 @@ export function MainContent() {
       <Resume />
       <Music />
       <AboutMe />
+      <Resources />
     </div>
   );
 }
